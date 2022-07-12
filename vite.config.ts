@@ -14,10 +14,19 @@ export default defineConfig({
     Components(),
     AutoImport({
       imports: [
-        'vue'
-      ]
+        'vue',
+        'vue/macros',
+        '@vueuse/core'
+      ],
+      dirs: [
+        './src/composable'
+      ],
+      vueTemplate: true
     }),
     UnoCSS({
+      shortcuts: {
+        'border-base': "border-gray/15"
+      },
       presets: [
         presetUno(),
         presetAttributify(),

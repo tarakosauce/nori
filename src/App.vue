@@ -1,18 +1,20 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-    <Hello name="Hilda" />
-    <div border="~ gray/20" m2 p2>
-      <Navbar />
+    <Navbar />
+    <div border black dark:border white m2 p2>
+      <SearchBar />
       <Agenda />
     </div>
 </template>
 
 <style>
-html {
-  background: #222;
+html.dark {
+  background: #000;
   color: #fff;
   color-scheme: dark;
 }
+
 </style>

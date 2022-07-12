@@ -8,10 +8,13 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Agenda: typeof import('./src/components/Agenda.vue')['default']
+    DarkMode: typeof import('./src/components/DarkMode.vue')['default']
     Hello: typeof import('./src/components/Hello.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SearchBar: typeof import('./src/components/SearchBar.vue')['default']
+    TimezoneItem: typeof import('./src/components/TimezoneItem.vue')['default']
     TimezoneSearch: typeof import('./src/components/TimezoneSearch.vue')['default']
   }
 }

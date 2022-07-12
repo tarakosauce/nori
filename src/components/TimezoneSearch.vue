@@ -11,8 +11,9 @@ const fuse = new Fuse(zone, {
 
 const input = ref('');
 const index = ref(0);
+
 const result = computed(() => {
-  return fuse.search(input.value)
+  return fuse.search(input.value).slice(0, 10);
 });
 
 const add = (t: Timezone) => {
@@ -24,20 +25,11 @@ const add = (t: Timezone) => {
 
 <template>
 <div relative>
-  <input v-model="input" type="text" placeholder="search" px2 py1 border bg-transparent />
-  <div v-show="input" absolute top-full bg-black text-white left-0 right-0>
-  <button v-for="i of result" :key="i.refIndex" flex gap2 @click="add(i.item)">
-    <div font-mono w-10 text-right>{{ i.item.offset }}</div>
-    <div>{{ i.item.name }}</div>
+  <input v-model="input" type="text" placeholder="search" px2 py1 bg-black dark:bg-white border-none text-white dark:text-black w-full />
+  <div v-show="input" absolute top-full bg-black dark:bg-white text-white dark:text-black left-0 right-0 flex flex-col max-h-100 overflow-auto z-10>
+  <button v-for="i of result" :key="i.refIndex" @click="add(i.item)">
+    <TimezoneItem :timezone="i.item" />
   </button>
   </div>
   </div>
 </template>
-
-<style>
-html {
-  background: #222;
-  color: #fff;
-  color-scheme: dark;
-}
-</style>

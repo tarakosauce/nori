@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { allZones } from '../composable/state'
 </script>
 
 <template>
-    <pre>{{ allZones }}</pre>
+<div p4>
+    <div v-for="zone of allZones" :key="zone.name">
+        <TimezoneItem :timezone="zone" />
+    </div>
+</div>
 </template>
