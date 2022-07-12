@@ -40,7 +40,7 @@ import { Timezone } from "../types";
         <div class="timemono" flex flex-row w-full justify-between>
             <div flex="~ col" text-left>
                 <div class="cityname">
-                    {{ city.replace(/_/g," ") }}
+                    {{ city }}
                 </div>
                 <div op50 leading-1em>
                     {{ region }}

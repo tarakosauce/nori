@@ -13,7 +13,7 @@ const input = ref('');
 const index = ref(0);
 
 const result = computed(() => {
-  return fuse.search(input.value).slice(0, 10);
+  return fuse.search(input.value);
 });
 
 const add = (t: Timezone) => {
