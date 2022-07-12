@@ -34,17 +34,19 @@ import { Timezone } from "../types";
 
 <template>
     <div flex gap2 py1 pl5>
-        <div text-lg w-10>
+        <div text-lg w-10 pt-2>
             {{ offset }}
         </div>
-        <div flex="~ col" text-left>
-            <div text-xl>
-                {{ city }}
+        <div class="timemono" flex flex-row w-full justify-between>
+            <div flex="~ col" text-left>
+                <div class="cityname">
+                    {{ city.replace(/_/g," ") }}
+                </div>
+                <div op50 leading-1em>
+                    {{ region }}
+                </div>
             </div>
-            <div op50 leading-1em>
-                {{ region }}
-            </div>
+            <div text-3xl font-mono>{{ time }}</div>
         </div>
-        <div>{{ time }}</div>
     </div>
 </template>

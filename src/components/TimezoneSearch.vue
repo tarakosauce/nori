@@ -25,7 +25,7 @@ const add = (t: Timezone) => {
 
 <template>
 <div relative>
-  <input v-model="input" type="text" placeholder="search" px2 py1 bg-black dark:bg-white border-none text-white dark:text-black w-full />
+  <input v-model="input" type="text" placeholder="search for a time..." px2 py1 bg-black dark:bg-white border-none text-white dark:text-black w-full />
   <div v-show="input" absolute top-full bg-black dark:bg-white text-white dark:text-black left-0 right-0 flex flex-col max-h-100 overflow-auto z-10>
   <button v-for="i of result" :key="i.refIndex" @click="add(i.item)">
     <TimezoneItem :timezone="i.item" />

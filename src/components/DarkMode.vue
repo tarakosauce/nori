@@ -5,5 +5,7 @@ const toggleDark = useToggle(isDark);
 </script>
  
 <template>
-    <button i-teenyicons:moon-solid dark:i-teenyicons:sun-solid @click="toggleDark()" />
+    <div h-full flex flex-row justify-center items-center>
+    <button text-center text-7xl i-teenyicons:moon-solid dark:i-teenyicons:sun-solid pr-20 @click="toggleDark()" />
+    </div>
 </template>

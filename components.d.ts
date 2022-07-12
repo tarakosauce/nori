@@ -16,5 +16,6 @@ declare module '@vue/runtime-core' {
     SearchBar: typeof import('./src/components/SearchBar.vue')['default']
     TimezoneItem: typeof import('./src/components/TimezoneItem.vue')['default']
     TimezoneSearch: typeof import('./src/components/TimezoneSearch.vue')['default']
+    WhatTime: typeof import('./src/components/WhatTime.vue')['default']
   }
 }
