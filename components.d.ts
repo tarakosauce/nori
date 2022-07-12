@@ -7,8 +7,11 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Agenda: typeof import('./src/components/Agenda.vue')['default']
     Hello: typeof import('./src/components/Hello.vue')['default']
+    Navbar: typeof import('./src/components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TimezoneSearch: typeof import('./src/components/TimezoneSearch.vue')['default']
   }
 }

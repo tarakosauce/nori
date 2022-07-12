@@ -2,7 +2,11 @@
 </script>
 
 <template>
-  <Hello name="Hilda" />
+    <Hello name="Hilda" />
+    <div border="~ gray/20" m2 p2>
+      <Navbar />
+      <Agenda />
+    </div>
 </template>
 
 <style>
